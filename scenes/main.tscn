@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkhrohtv4txqi"]
+[gd_scene load_steps=3 format=3 uid="uid://bkhrohtv4txqi"]
 
-[ext_resource type="Texture2D" uid="uid://coimrj3yx8s4u" path="res://icon.svg" id="1_hj13t"]
+[ext_resource type="PackedScene" uid="uid://de3jf7v2ng1n4" path="res://scenes/player.tscn" id="1_ahvqe"]
+[ext_resource type="Script" path="res://scripts/player.cs" id="2_doi1q"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(119, 114)
-texture = ExtResource("1_hj13t")
+[node name="Player" parent="." instance=ExtResource("1_ahvqe")]
+position = Vector2(93, 114)
+script = ExtResource("2_doi1q")
